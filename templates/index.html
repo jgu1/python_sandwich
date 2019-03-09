@@ -2,9 +2,14 @@
 {% block body %}
   <script src={{ url_for ('static',filename='d3.v4.min.js')}}></script>
   <script src={{ url_for ('static',filename='jquery.min.js')}}></script>
+        python_meats:
+        {% for python_meat in python_meat_list%}
+            <li>{{python_meat}}</li>
+        {% endfor %}
 
-        {% for type_calorie in type_calorie_list%}
-            <li>{{type_calorie}}</li>
+        bottom_breads:
+        {% for bottom_bread in bottom_bread_list%}
+            <li>{{bottom_bread}}</li>
         {% endfor %}
 
 {% endblock %}
