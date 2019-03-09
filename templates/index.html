@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+  <script src={{ url_for ('static',filename='d3.v4.min.js')}}></script>
+  <script src={{ url_for ('static',filename='jquery.min.js')}}></script>
+
+        {% for type_calorie in type_calorie_list%}
+            <li>{{type_calorie}}</li>
+        {% endfor %}
+
+{% endblock %}
