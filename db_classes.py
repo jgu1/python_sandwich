@@ -16,15 +16,19 @@ class DAO(object):
     def get_bread_calorie(self):
         # use_case_0: string literal
         sql_template = 'select type,calorie from bottom_bread;'
+        
         # use_case_1: calling a function, although a mysterious one, it is a function after all
         rows = self.exec_fetch_SQL(sql_template)
+        
         # use_case_2: define an empty list
         type_calorie_list = []
+        
         # use_case_3: loop
         for row in rows:
             bread_type = row[0]
             bread_calorie = row[1]
             type_colorie_pair = [bread_type,bread_calorie]
+                
             # use_case_2.5: append to list
             type_calorie_list.append(type_colorie_pair)
         return type_calorie_list    

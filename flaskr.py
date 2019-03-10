@@ -21,7 +21,8 @@ def teardown_request(exception):
 @app.route('/')
 def show_index_page():
     dao = getattr(g, 'dao', None)
-    python_meat_list  = ['beef','chicken','tempura']
+    # where the meat comes from!
+    python_meat_list  = ['beef','chicken','tempura','tofu']
     bottom_bread_list = dao.get_bread_calorie()
     return render_template('index.html',python_meat_list = python_meat_list, bottom_bread_list = bottom_bread_list)
     
