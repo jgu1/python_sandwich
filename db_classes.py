@@ -2,10 +2,10 @@ import MySQLdb
 class DAO(object):
     db = None
     def __init__(self):
-        self.db = MySQLdb.connect(host="genomesvr2", # your host, usually localhost
-                    user="es", # your username
-                    passwd="detective", # your password
-                    db="ES_OUTPUT") # name of the data base
+        self.db = MySQLdb.connect(host="your_database_name", # your host, usually localhost
+                    user="your_database_user_name", # your username
+                    passwd="your_database_password", # your password
+                    db="your_database_to_use_for_current_session") # name of the data base
 
     def exec_fetch_SQL(self,sql_template):
         cur = self.db.cursor()
